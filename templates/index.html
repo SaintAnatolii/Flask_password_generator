@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #2f2f2f;
+            height: 100vh;
+        }
+        .wrapper {
+            width: 500px;
+            height: 500px;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1 {
+            margin-bottom: 50px;
+        }
+        .form_group {
+            margin-bottom: 30px;
+        }
+        label {
+            font-size: 24px;
+        }
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+        }
+        button {
+            width: 300px;
+            height: 50px;
+            color: #fff;
+            background-color: #2f2f2f;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Your new password<br>{{password}}</h1>
+        <form action="" method="post">
+            <div class="form_group">
+                <label for="passlen">Length password:
+                    <select name="passlen" id="passlen">
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </label>
+            </div>
+        
+            
+            <div class="form_group">
+                <label for="uppercase">
+                    <input type="checkbox" name="uppercase" id="uppercase">
+                    Include Uppercase
+                </label>
+            </div>
+        
+            <div class="form_group">
+                <label for="numbers">
+                    <input type="checkbox" name="numbers" id="numbers">
+                    Include Numbers
+                </label>
+            </div>
+        
+            <div class="form_group">
+                <label for="special">
+                    <input type="checkbox" name="special" id="special">
+                    Include Special
+                </label>
+            </div>
+
+            <button type="submit">Generate</button>
+        </form>
+    </div>
+</body>
+</html>
